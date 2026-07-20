@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Artem Tsvetkov — Projects</title>
+<meta name="description" content="Selected projects by Artem Tsvetkov — Telegram automation, video tooling, and full-stack apps." />
+<style>
+  :root {
+    --bg: #0b0d12;
+    --bg-elevated: #12151c;
+    --border: #232733;
+    --text: #e8eaef;
+    --text-dim: #9aa1b2;
+    --accent: #7c9eff;
+    --accent-soft: rgba(124, 158, 255, 0.12);
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f6f7fb;
+      --bg-elevated: #ffffff;
+      --border: #e3e6ee;
+      --text: #14161f;
+      --text-dim: #5c6272;
+      --accent: #3a5ce5;
+      --accent-soft: rgba(58, 92, 229, 0.08);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0b0d12; --bg-elevated: #12151c; --border: #232733;
+    --text: #e8eaef; --text-dim: #9aa1b2; --accent: #7c9eff; --accent-soft: rgba(124, 158, 255, 0.12);
+  }
+  :root[data-theme="light"] {
+    --bg: #f6f7fb; --bg-elevated: #ffffff; --border: #e3e6ee;
+    --text: #14161f; --text-dim: #5c6272; --accent: #3a5ce5; --accent-soft: rgba(58, 92, 229, 0.08);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 72px 24px 96px; }
+
+  header.hero { display: flex; flex-direction: column; gap: 14px; margin-bottom: 56px; }
+  .avatar-row { display: flex; align-items: center; gap: 18px; }
+  .avatar {
+    width: 56px; height: 56px; border-radius: 16px;
+    background: linear-gradient(135deg, var(--accent), #b98cff);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 22px; color: #0b0d12; flex-shrink: 0;
+  }
+  h1 { font-size: 28px; margin: 0; letter-spacing: -0.02em; }
+  .role { color: var(--text-dim); font-size: 15px; margin-top: 2px; }
+  .lede { color: var(--text-dim); font-size: 16px; max-width: 60ch; margin-top: 6px; }
+
+  .links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    border: 1px solid var(--border); border-radius: 999px;
+    padding: 7px 14px; font-size: 13px; color: var(--text);
+    text-decoration: none; transition: border-color .15s, background .15s;
+  }
+  .pill:hover { border-color: var(--accent); background: var(--accent-soft); }
+
+  section h2 {
+    font-size: 13px; text-transform: uppercase; letter-spacing: .08em;
+    color: var(--text-dim); font-weight: 600; margin: 0 0 20px;
+  }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+
+  .card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform .15s ease, border-color .15s ease;
+  }
+  .card:hover { transform: translateY(-2px); border-color: var(--accent); }
+
+  .card-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+  .card-title { font-size: 17px; font-weight: 600; }
+  .arrow { color: var(--text-dim); font-size: 16px; transition: transform .15s, color .15s; }
+  .card:hover .arrow { transform: translate(2px, -2px); color: var(--accent); }
+
+  .card-desc { color: var(--text-dim); font-size: 14px; flex-grow: 1; }
+
+  .stack { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+  .tag {
+    font-size: 11.5px; color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 6px; padding: 3px 8px;
+    font-weight: 500;
+  }
+
+  footer {
+    margin-top: 72px; padding-top: 24px; border-top: 1px solid var(--border);
+    color: var(--text-dim); font-size: 13px;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  }
+  footer a { color: var(--text-dim); }
+
+  @media (max-width: 480px) {
+    .wrap { padding: 48px 18px 64px; }
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="avatar-row">
+        <div class="avatar">AT</div>
+        <div>
+          <h1>Artem Tsvetkov</h1>
+          <div class="role">Builder of automation tools, Telegram apps &amp; video tech</div>
+        </div>
+      </div>
+      <p class="lede">Selected side projects — Telegram automation, full-stack mini-apps, and video tooling. Code and details in each repo below.</p>
+      <div class="links">
+        <a class="pill" href="https://github.com/Detemen" target="_blank" rel="noopener">
+          GitHub · @Detemen
+        </a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="grid">
+
+        <a class="card" href="https://github.com/Detemen/ChatsSpider" target="_blank" rel="noopener">
+          <div class="card-top">
+            <span class="card-title">ChatsSpider</span>
+            <span class="arrow">↗</span>
+          </div>
+          <p class="card-desc">Multi-account Telegram spider that scrapes channels &amp; chats and classifies them via ChatGPT for ad-inventory analysis. Deployed in production on a Docker host.</p>
+          <div class="stack">
+            <span class="tag">Python</span>
+            <span class="tag">Telethon</span>
+            <span class="tag">Playwright</span>
+            <span class="tag">Docker</span>
+          </div>
+        </a>
+
+        <a class="card" href="https://github.com/Detemen/TG_bot_game" target="_blank" rel="noopener">
+          <div class="card-top">
+            <span class="card-title">Marble Race</span>
+            <span class="arrow">↗</span>
+          </div>
+          <p class="card-desc">Telegram Mini App betting game with TON &amp; Telegram Stars — physics-based race, React frontend, Node/Prisma backend, Python bot.</p>
+          <div class="stack">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Prisma</span>
+            <span class="tag">Telegram</span>
+          </div>
+        </a>
+
+        <a class="card" href="https://github.com/Detemen/commyx-intel" target="_blank" rel="noopener">
+          <div class="card-top">
+            <span class="card-title">CommyX Intel</span>
+            <span class="arrow">↗</span>
+          </div>
+          <p class="card-desc">Dockerized pipeline that scrapes, syncs, clusters (embeddings + UMAP) and classifies Telegram channels/chats, served through a FastAPI dashboard.</p>
+          <div class="stack">
+            <span class="tag">FastAPI</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">ML</span>
+            <span class="tag">Docker</span>
+          </div>
+        </a>
+
+        <a class="card" href="https://github.com/zz41354899/SwiftClip" target="_blank" rel="noopener">
+          <div class="card-top">
+            <span class="card-title">SwiftClip</span>
+            <span class="arrow">↗</span>
+          </div>
+          <p class="card-desc">Production-ready library of Remotion video templates with a Claude Code workflow for storyboard-driven video generation.</p>
+          <div class="stack">
+            <span class="tag">Remotion</span>
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+          </div>
+        </a>
+
+        <a class="card" href="https://github.com/Detemen/project-roadmap-site" target="_blank" rel="noopener">
+          <div class="card-top">
+            <span class="card-title">Project Atlas</span>
+            <span class="arrow">↗</span>
+          </div>
+          <p class="card-desc">Interactive dashboard visualizing a personal project portfolio — filterable roadmap with a project-relationship "constellation" view.</p>
+          <div class="stack">
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Vite</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <footer>
+      <span>Artem Tsvetkov</span>
+      <a href="https://github.com/Detemen" target="_blank" rel="noopener">github.com/Detemen</a>
+    </footer>
+  </div>
+</body>
+</html>
